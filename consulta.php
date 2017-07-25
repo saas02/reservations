@@ -31,8 +31,7 @@ class datosModelo extends Modelo {
         INNER JOIN orders AS OD ON OP.order_id = OD.id 
         INNER JOIN customer as custom ON OD.customer_id = custom.id
         INNER JOIN provider on OP.provider_id = provider.id
-        WHERE OD.customer_id IN (100,676,677)
-        
+        WHERE OD.customer_id IN (100,676,677)        
         
         AND OD.creationDate BETWEEN '" . $desde . "' AND '" . $hasta . "'
         ORDER BY OD.creationDate DESC");
